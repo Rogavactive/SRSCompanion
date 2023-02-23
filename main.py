@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from random import shuffle
 import json
 
 @dataclass
@@ -28,7 +29,7 @@ def askQuestions(questions):
     questionCount = len(questionsToShow)
     print("\n \033[1m *** " + str(questionCount) + " question(s) *** \033[0m" )
     correctCount = 0
-    for i, elem in enumerate(questionsToShow):
+    for i, elem in enumerate(shuffle(questionsToShow)):
         print("\nQuestion (" + str(i+1) + "/" + str(questionCount) + "): \033[94m" + elem.question + "\033[0m")
         userAnswer = input("What's your answer:\033[92m")
         print("\033[0mCorrect answer was:\033[92m" + elem.answer + "\033[0m")
