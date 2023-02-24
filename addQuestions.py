@@ -42,6 +42,7 @@ def addQuestions(questions):
                     previousEasiness=1
                 )
             )
+            saveJson()
     saveJson()
 
 def saveJson():
